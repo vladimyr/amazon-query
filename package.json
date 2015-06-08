@@ -1,0 +1,20 @@
+{
+  "name": "amazon-query",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify index.js -s queryAmazon > ./dist/amazon-query.js"
+  },
+  "author": "vladimyr",
+  "license": "WTFPL",
+  "dependencies": {
+    "cheerio": "^0.19.0",
+    "superagent": "^1.2.0"
+  },
+  "devDependencies": {
+    "browserify": "^10.2.4",
+    "yargs": "^3.10.0"
+  }
+}

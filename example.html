@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Amazon query demo page</title>
+</head>
+<body>
+    <label for="bookId">Book ID:&nbsp;</label>
+    <input id="bookId" name="bookId" type="text">
+    <input id="queryBtn" type="button" value="Execute query!">
+    <pre id="output"></pre>
+    <script src="./dist/amazon-query.js"></script>
+    <script>
+        var idInput  = document.getElementById('bookId'),
+            queryBtn = document.getElementById('queryBtn'),
+            output   = document.getElementById('output');
+
+        queryBtn.addEventListener('click', function(){
+            queryAmazon(idInput.value, function(err, result){
+                output.innerHTML = JSON.stringify(result, null, 2);
+            });
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+# deps
+node_modules
+
+# editors
+*.sublime-*
+.idea
+
+# preserve directory
+dist/*
+!dist/.gitkeep
+
+# custom npm config
+.npmrc
